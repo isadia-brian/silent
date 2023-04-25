@@ -34,10 +34,7 @@ const Navbar = () => {
       title: "Houses",
       link: "/houses",
     },
-    {
-      title: "Movie",
-      link: "/movies",
-    },
+
     {
       title: "Contact us",
       link: "/",
