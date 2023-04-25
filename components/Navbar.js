@@ -32,7 +32,7 @@ const Navbar = () => {
     },
     {
       title: "Houses",
-      link: "/house",
+      link: "/houses",
     },
     {
       title: "Movie",
