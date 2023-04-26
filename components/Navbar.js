@@ -77,9 +77,9 @@ const Navbar = () => {
           y > 0
             ? "bg-green-800 transition duration-500 ease-in "
             : " duration-300 ease-in"
-        } md:flex items-center justify-between w-full  py-6 px-4 md:px-20`}
+        } flex items-center justify-between w-full  py-6 px-4 md:px-20`}
       >
-        <div className="relative h-[60px] w-[80px] md:h-[100px] md:w-[100px] rounded-full ">
+        <div className="relative h-[60px] w-[60px] md:h-[100px] md:w-[100px] rounded-full ">
             <Image src="/logo.jpeg" alt="logo" fill className="rounded-full" />
         </div>
         <div className="">
