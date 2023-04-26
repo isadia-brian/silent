@@ -72,10 +72,10 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="w-full fixed  top-0 left-0 text-white z-50">
+    <header className="w-full fixed  top-0 left-0 text-black z-50">
       <div className={`w-full justify-between ${
           y > 0
-            ? "bg-green-800 transition duration-500 ease-in "
+            ? "bg-green-800 text-white transition duration-500 ease-in "
             : " duration-300 ease-in"
         } flex items-center justify-between w-full  py-6 px-4 md:px-20`}
       >

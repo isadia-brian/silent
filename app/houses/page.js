@@ -7,7 +7,7 @@ const kugile = localFont({ src: "../../public/kugile/Kugile_Demo.ttf" });
 
 const Houses = () => {
   return (
-    <div className="h-[70vh] md:h-screen px-20 py-10 flex w-full ">
+    <div className="h-[70vh] md:h-screen mt-[120px] px-20 py-10 flex w-full ">
       <div className="border border-black w-full flex space-x-4 h-fit">
         <div className="relative h-80 w-80 bg-black">
           <Image src="/img14.webp" alt="room" fill />
