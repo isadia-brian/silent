@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${poppins.className}`}>
       <body className="">
         <Navbar />
-        <div className=" absolute top-[117px] md:top-[175px] w-full">
+        <div className=" absolute   w-full">
           {children}
           <Footer />
         </div>

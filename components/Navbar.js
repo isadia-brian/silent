@@ -31,7 +31,7 @@ const Navbar = () => {
       link: "/",
     },
     {
-      title: "Houses",
+      title: "Apartments",
       link: "/houses",
     },
 
@@ -40,21 +40,29 @@ const Navbar = () => {
       link: "/",
     },
     {
+      title: "Rates",
+      link: "/",
+    },
+    {
       title: "Contact us",
       link: "/",
     },
     {
-      title: "Login",
-      link: "/login",
+      title: "faqs",
+      link: "/",
     },
-    {
-      title: "Register",
-      link: "/register",
-    },
-    {
-      title: "Forgot Password",
-      link: "/forgot",
-    },
+    // {
+    //   title: "Login",
+    //   link: "/login",
+    // },
+    // {
+    //   title: "Register",
+    //   link: "/register",
+    // },
+    // {
+    //   title: "Forgot Password",
+    //   link: "/forgot",
+    // },
   ];
 
   useEffect(() => {
@@ -64,12 +72,40 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="w-full fixed top-0 left-0 text-white z-50">
-      <div
-        className={`${
+    <header className="w-full fixed  top-0 left-0 text-white z-50">
+      <div className={`w-full justify-between ${
           y > 0
             ? "bg-green-800 transition duration-500 ease-in "
-            : "bg-white transition duration-300 ease-in"
+            : " duration-300 ease-in"
+        } md:flex items-center justify-between w-full  py-6 px-4 md:px-20`}
+      >
+        <div className="relative h-[60px] w-[80px] md:h-[100px] md:w-[100px] rounded-full ">
+            <Image src="/logo.jpeg" alt="logo" fill className="rounded-full" />
+        </div>
+        <div className="">
+        <nav className="hidden md:flex   items-center py-5  ">
+          <ul className="flex items-center justify-between font-bold  ">
+            {Links.map(({ title, link }, index) => {
+              return (
+                <li
+                  key={index}
+                  className={`min-w-fit md:ml-8  uppercase text-4xl md:text-[15px] my-10 md:my-0 hover:text-amber-400 duration-500  md:${poppins.className} font-extrabold`}
+                >
+                  <Link href={link}>{title}</Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </div>
+      <button className="bg-green-500 rounded-full text-sm px-4 py-3">RESERVATION</button>
+      </div>
+      
+      {/* <div
+        className={`w-full justify-between ${
+          y > 0
+            ? "bg-green-800 transition duration-500 ease-in "
+            : " duration-300 ease-in"
         } md:flex items-center justify-between  py-6 px-4 md:px-20`}
       >
         <div className="flex items-center">
@@ -77,11 +113,27 @@ const Navbar = () => {
             <Image src="/logo.jpeg" alt="logo" fill className="rounded-full" />
           </div>
         </div>
-        <DateRange />
-        <div className="h-8 w-8 rounded-md hidden md:flex">
+        {/* <DateRange /> */}
+        {/* <div className="w-full  ">
+        <nav className="hidden md:flex   items-center py-5  ">
+          <ul className="flex items-center justify-between font-bold  ">
+            {Links.splice(0, 4).map(({ title, link }, index) => {
+              return (
+                <li
+                  key={index}
+                  className={`min-w-fit md:ml-8  uppercase text-4xl md:text-sm my-10 md:my-0 hover:text-amber-400 duration-500  md:${poppins.className} font-extrabold`}
+                >
+                  <Link href={link}>{title}</Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </div>
+        {/* <div className="h-8 w-8 rounded-md hidden md:flex">
           <FaUserCircle className="text-2xl text-black" />
-        </div>
-        <div
+        </div> */}
+        {/* <div
           className={`absolute right-4 top-10 text-3xl md:hidden ${
             y > 0 ? "text-white" : "text-black"
           }`}
@@ -112,24 +164,9 @@ const Navbar = () => {
             );
           })}
           <Button>BOOK NOW</Button>
-        </ul>
-      </div>
-      <div className="w-full  ">
-        <nav className="hidden md:flex  bg-green-800 items-center py-5  ">
-          <ul className="flex items-center justify-between font-bold w-full max-w-[400px] mx-auto ">
-            {Links.splice(0, 4).map(({ title, link }, index) => {
-              return (
-                <li
-                  key={index}
-                  className={`min-w-fit md:ml-8  uppercase text-4xl md:text-sm my-10 md:my-0 hover:text-amber-400 duration-500  md:${poppins.className} font-extrabold`}
-                >
-                  <Link href={link}>{title}</Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      </div>
+        </ul> */}
+      {/* </div> */}
+       
     </header>
   );
 };
