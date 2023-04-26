@@ -12,15 +12,15 @@ const kugile = localFont({ src: "../public/kugile/Kugile_Demo.ttf" });
 const Hero = () => {
   return (
     <div className="flex md:flex-row-reverse justify-between flex-col w-full md:border-b-[0.2px]">
-      <div className=" h-[370px] md:h-[80vh] md:w-[50%] relative m-6 md:m-0 rounded-2xl md:rounded-none">
+      <div className=" h-[370px] md:h-[80vh] w-full  relative m-6 md:m-0 rounded-2xl md:rounded-none">
         <Image
-          src="/img22.webp"
+          src="/hero.webp"
           alt="hero"
           fill
           className="rounded-2xl md:rounded-none"
         />
       </div>
-      <div className=" h-[40vh] md:h-[80vh] ml-6 md:ml-0">
+      {/* <div className=" h-[40vh] md:h-[80vh] ml-6 md:ml-0">
         <div className="md:pl-20 h-full flex flex-col justify-center ">
           <p
             className={`${kugile.className} text-7xl md:text-7xl text-green-800`}
@@ -44,7 +44,7 @@ const Hero = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
